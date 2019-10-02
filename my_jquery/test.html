@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/core.js"></script>
+</head>
+<style>
+    td {
+        width: 100px;
+        height: 50px;
+        text-align: center
+    }
+
+    select{
+        margin: 0 10px 100px 0
+    }
+
+</style>
+<body>
+    <div class="select">
+        <select name="s1" id="">
+            <option value="s1">s1</option>
+        </select>
+        <select name="s2" id="">
+            <option value="s2">s2</option>
+        </select>
+        <select name="s3" id="">
+            <option value="s3">s3</option>
+        </select>
+    </div>
+    
+<script>
+    let arr = [
+        [1, 2, 133, 5],
+        [2, 110, 15, 16],
+        [53, 1, 21, 320]
+    ]
+
+
+    function renderArr (arr) {
+        var table = document.createElement('table')
+        table.setAttribute('border', 1)
+        table.setAttribute('cellspacing', 0)
+        arr.map((list)=> {
+            var tr = document.createElement('tr')
+            list.map((item, index) => {
+                var td = document.createElement('td')
+                td.innerHTML = item
+                tr.appendChild(td)
+                item == Math.max.apply(null, list) ? td.setAttribute('style','color:red') : ''
+            })
+            table.appendChild(tr)
+        })
+        document.getElementsByTagName('body')[0].appendChild(table)
+    }
+
+    renderArr(arr)
+
+    
+</script>
+</body>
+</html>
+
+
+// $(function () {
+    //     var searchInfo = [
+    //         {
+    //             id: 1,
+    //             text: '行业知识服务与知识管理平台'
+    //         },
+    //         {
+    //             id: 2,
+    //             text: '研究学习平台'
+    //         },
+    //         {
+    //             id:3,
+    //             text: '专题知识库'
+    //         },
+    //         {
+    //             id: 4,
+    //             text: '出版平台'
+    //         },
+    //         {
+    //             id: 5,
+    //             text: '科研统计与期刊评价'
+    //         },
+    //         {
+    //             id: 6,
+    //             text: '国际出版'
+    //         },
+    //         {
+    //             id: 7,
+    //             text: '平ndnsk台'
+    //         }
+    //     ]
+
+    //     function innerShow () {
+    //         $("ul").empty()
+    //         searchInfo.filter((item) => {
+    //             return item.text.toLowerCase().indexOf($('#search').val().toLowerCase()) > -1
+    //         }).map((item) => {
+    //             $(".inner").append("<li>"+ item.text + "</li>")
+    //             return item
+    //         }).length === 0 ? $('.inner').css({'display': 'none'}) : $('.inner').show()
+    //     }
+
+    //     $('#search').keyup(() => {
+    //         $('#search').val().trim() ? innerShow() : $('.inner').hide()
+    //     })
+
+    //     $('ul').on('click', 'li', function() {
+    //         $('#search').val($(this).text())
+    //     })
+
+    // })

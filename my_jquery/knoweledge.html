@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    #search {
+        font-size: 12px;
+    }
+
+    .wrap {
+        width: 500px;
+        margin: 30px 0 0 30px;
+    }
+
+    .inner {
+        width: 100%;
+        border: 1px solid #ced4da;
+        margin-top: 5px;
+        border-radius: 5px;
+        display: none;
+    }
+
+    li {
+        font-size: 12px;
+        margin: 8px 0;
+        padding: 2px 10px;
+        cursor: pointer;
+    }
+
+    li:hover {
+        background-color: #ced4da
+    }
+
+</style>
+<body>
+    <div class="wrap">
+        <ol>
+            <li>模糊搜素</li>
+            <li>不区分大小写搜索</li>
+            <li>输入"题库"可搜索到"专题知识库"</li>
+        </ol>
+        <input type="search" class="form-control" id="search" placeholder="请输入关键字">
+        <ul class="inner"></ul>
+    </div>
+<script>
+    // var url = "http://witmax.cn/index.php?key0=0&key1=1&key2=2"
+
+    // function parseQueryString (url) {
+    //     var items = url.split("?")[1].split('&')
+    //     var obj = {}
+    //     items.map(function(item) {
+    //         arr = item.split('=')
+    //         obj[arr[0]]=arr[1]
+    //         console.log(item)
+    //     })
+    //     console.log(obj)
+    // }
+
+    // parseQueryString(url)
+
+    // Array.isArray(obj)
+    // obj instanceof Array
+    // obj.constructor === Array
+    // Object.prototype.toString.call(obj) === '[Object Array]'
+
+
+    // var str = 'this is my first time in this room to  show my skills, as you know this is owesome';
+    
+    //     getIndex(str, 'this');
+        
+    //     function getIndex(str, searchval) {
+    //       var indexArr = [];
+    //       var searchValIndex = 0;
+    //       while(str.indexOf(searchval) !== -1) {
+    //         searchValIndex += str.indexOf(searchval);
+    //         indexArr.push(searchValIndex);
+    
+    //         str = str.substring(++searchValIndex)
+    //       }
+    
+    //       return console.log(indexArr)
+    //     }
+    
+//     window.val = 1;
+//  var obj = {
+//    val: 2,
+//    dbl: function () {
+//      this.val *= 2;
+//      val *= 2;
+//      console.log(val);
+//      console.log(this.val);
+//    }
+//  };
+//  // 说出下面的输出结果
+//  obj.dbl();
+//  var func = obj.dbl;
+//  func();
+
+
+var arr = [1, 2, 3]
+var reducer = function(sumSoFar, item) { return sumSoFar + item; };
+var c = arr.reduce((pre,next)=> {
+    return pre+next
+})
+console.log(c)
+</script>
+
+</body>
+</html>
